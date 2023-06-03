@@ -1,0 +1,40 @@
+.hero {
+    width: 100%;
+    height: 80dvh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    padding: var(--space-s) var(--space-l);
+}
+
+.heroImage {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-m);
+    position: relative;
+    z-index: 1;
+}
+
+.line {
+    height: 2px;
+    background-color: currentColor;
+    flex-grow: 1;
+}

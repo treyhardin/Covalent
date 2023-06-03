@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+
+  /* Fluid Typography */
+  --viewport-desktop: 1440;
+  --viewport-mobile: 375;
+  --viewport-range: calc( var(--viewport-desktop) - var(--viewport-mobile) );
+  --viewport-percent: calc( (100vw - (var(--viewport-mobile) * 1px)) / var(--viewport-range) );
+  --font-size-range: calc( var(--font-size-desktop) - var(--font-size-mobile) );
+  --fluid-font-size: calc( var(--font-size-range) * var(--viewport-percent) + (var(--font-size-mobile)) * 1px );
+}
+
+:root {
+  /* Spacing */
+  --space-xl: 60px;
+  --space-l: 30px;
+  --space-m: 20px;
+  --space-s: 15px;
+  --space-xs: 10px;
+
+  /* Colors */
+  --color-ink: #1C1C1C;
+  --color-subdued: #3C3C41;
+  --color-neutral: #D4D6CA;
+  --color-light: #EAEBE1;
+  --color-reverse: #FEFFF7;
+  --color-primary: #AFAFE0;
+  --color-secondary: #787973;
+
+  /* Brand Styles */
+  --rounded-border: 4px;
+
+  /* Animation */
+  --easing: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-short: 0.3s var(--easing);
+
+  /* Browser Adjustments */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: "regular";
+  src: 
+  url("/fonts/PPNeueMontreal-Regular.otf") format("opentype"),
+  url("/fonts/PPNeueMontreal-Regular.woff") format("woff"), 
+  url("/fonts/PPNeueMontreal-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Teodor";
+  font-weight: 200;
+  src: 
+  url("/fonts/Teodor-Thin.otf") format("opentype");
+}
+
+#root {
+  width: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  background-color: var(--color-ink);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--color-ink);
+  font-family: 'Neue Montreal', Helvetica, sans-serif;
+}
+
+.colorInk {
+  color: var(--color-ink);
+}
+
+.colorSubdued {
+  color: var(--color-subdued);
+}
+
+.colorLight {
+  color: var(--color-light);
+}
+
+.colorReverse {
+  color: var(--color-reverse);
+}
+
+.clear-margin {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Teodor', serif;
+  margin: 0 0 0.2em;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  font-weight: 200;
+  
+  /*   We use max here to ensure that font size never goes smaller than the size in the mobile designs */
+  font-size: max( var(--fluid-font-size), calc(var(--font-size-mobile) * 1px) );
+}
+
+h1,
+.h1 {
+  --font-size-desktop: 86;
+  --font-size-mobile: 46;
+}
+
+h2,
+.h2 {
+  --font-size-desktop: 64;
+  --font-size-mobile: 40;
+}
+
+h3,
+.h3 {
+  --font-size-desktop: 46;
+  --font-size-mobile: 32;
+}
+
+h4,
+.h4 {
+  --font-size-desktop: 34;
+  --font-size-mobile: 26;
+}
+
+h5,
+.h5 {
+  --font-size-desktop: 26;
+  --font-size-mobile: 20;
+}
+
+h6,
+.h6 {
+  --font-size-desktop: 20;
+  --font-size-mobile: 16;
+}
+
+p,
+a,
+ul {
+  font-size: max( var(--fluid-font-size), calc(var(--font-size-mobile) * 1px) );
+  margin: 0 0 0.4em;
+}
+
+p {
+  --font-size-desktop: 16;
+  --font-size-mobile: 14;
+}
+
+a {
+  --font-size-desktop: 16;
+  --font-size-mobile: 14;
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
