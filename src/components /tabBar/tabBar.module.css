@@ -1,6 +1,6 @@
 .tabBar {
     background-color: var(--color-reverse);
-    padding: var(--space-xl) var(--space-l) var(--space-m);
+    padding: var(--space-l) var(--space-l) var(--space-m);
 }
 
 .tabBarInner {

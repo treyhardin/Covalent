@@ -8,19 +8,17 @@
     height: 90dvh;
     overflow: hidden;
     border-radius: var(--rounded-large);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .backgroundImage {
     position: absolute;
-    top: 0;
-    left: 0;
     object-fit: cover;
     min-width: 100%;
 }
 
 .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-width: 800px;
 }

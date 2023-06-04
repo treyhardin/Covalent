@@ -7,16 +7,16 @@ export default function Overview_Tier1(props) {
     return (
         <>
             <TextQuote 
-                title="Text Section"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+                title="Tier One Animation"
+                text="Our standard approach to interactivity."
             />
             <TextImage
-                title="Section Animation"
+                title="Load-In Animations"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 image="/images/tier1/TextImage.jpg"
             />
             <FullBleed 
-                title="Section Animation"
+                title="Background Animations"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 image="/images/tier1/FullBleed.jpg"
                 color="reverse"
@@ -24,15 +24,15 @@ export default function Overview_Tier1(props) {
             <ValueProps 
                 values={[{
                     icon: 'atom',
-                    title: 'Atom',
+                    title: 'CSS Only',
                     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }, {
                     icon: 'rose',
-                    title: 'Rose',
+                    title: 'Simple & Performant',
                     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 },{
                     icon: 'spiral',
-                    title: 'Spiral',
+                    title: 'Timeline/Budget Friendly',
                     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 }]}
             />

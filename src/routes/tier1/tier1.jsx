@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Navigate, Outlet } from "react-router-dom";
 import Tier2 from "../tier2/tier2";
 import Header from "../../components /header/ header";
 import Hero from "../../components /hero/hero";
@@ -24,14 +24,14 @@ export default function Tier1(props) {
                     label: 'Overview',
                     url: 'overview'
                 },{
-                    label: 'Sections',
-                    url: 'sections'
+                    label: 'Text',
+                    url: 'text'
                 },{
                     label: 'Images',
                     url: 'images'
                 },{
-                    label: 'Buttons',
-                    url: 'buttons'
+                    label: 'Settings',
+                    url: 'settings'
                 }]}
             />
             <Outlet />

@@ -2,6 +2,7 @@ import TextImage from "../../components /textImage/textImage";
 import ValueProps from "../../components /valueProps/valueProps";
 import FullBleed from "../../components /fullBleed/fullBleed";
 import TextQuote from "../../components /textQuote/textQuote";
+import { Navigate } from "react-router-dom";
 
 export default function Overview_Tier2(props) {
     return (

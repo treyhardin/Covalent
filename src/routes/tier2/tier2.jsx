@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import Header from "../../components /header/ header";
 import Hero from "../../components /hero/hero";
 import TabBar from "../../components /tabBar/tabBar";
