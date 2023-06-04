@@ -1,0 +1,12 @@
+.textQuote {
+    background-color: var(--color-reverse);
+    padding: var(--space-xl) var(--space-l);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    max-width: 1024px;
+    width: 100%;
+}

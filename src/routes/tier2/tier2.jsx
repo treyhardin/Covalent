@@ -1,23 +1,18 @@
-import { NavLink, Outlet } from "react-router-dom";
-import Tier2 from "../tier2/tier2";
+import { Outlet } from "react-router-dom";
 import Header from "../../components /header/ header";
 import Hero from "../../components /hero/hero";
 import TabBar from "../../components /tabBar/tabBar";
-import TextImage from "../../components /textImage/textImage";
-import ValueProps from "../../components /valueProps/valueProps";
-import FullBleed from "../../components /fullBleed/fullBleed";
 import LinkBlocks from "../../components /linkBlocks/linkBlocks";
-import TextQuote from "../../components /textQuote/textQuote";
 
-export default function Tier1(props) {
+export default function Tier2(props) {
     return (
         <>
             <Header />
             <Hero 
                 title="Animations"
-                subtitle="Tier 1*"
-                image="/images/tier2/Hero.jpeg"
-                color="dark"
+                subtitle="Tier 2*"
+                image="/images/tier1/Hero.webp"
+                color="reverse"
             />
             <TabBar 
                 tabs={[{
@@ -37,15 +32,16 @@ export default function Tier1(props) {
             <Outlet />
             <LinkBlocks 
                 blocks={[{
-                    title: "Tier 2",
+                    title: "Tier 1",
                     text: "text",
-                    image: "/images/tier2/LinkBlock.jpg"
+                    image: "/images/tier1/LinkBlock.jpg"
                 },{
                     title: "Tier 3",
                     text: "text",
                     image: "/images/tier3/LinkBlock.jpg"
                 }]}
             />
+        
         </>
     )
 }

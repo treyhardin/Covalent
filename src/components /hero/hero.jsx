@@ -11,7 +11,7 @@ export default function Hero(props){
                 }`}>
                 <h1 className="h1 clear-margin">{props.title}</h1>
                 <div className={styles.line}></div>
-                <h2 className="h1 clear-margin">{props.subtitle}</h2>
+                <h2 className="h1 clear-margin italic">{props.subtitle}</h2>
             </div>
             <img src={props.image} className={styles.heroImage} />
         </section>

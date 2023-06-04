@@ -1,0 +1,48 @@
+.tabBar {
+    background-color: var(--color-reverse);
+    padding: var(--space-xl) var(--space-l) var(--space-m);
+}
+
+.tabBarInner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--color-ink);
+    border-radius: var(--space-m);
+    overflow: hidden;
+}
+
+.tab {
+    border: none;
+    color: var(--color-ink);
+    background-color: var(--color-reverse);
+    margin: 0;
+    padding: 0;
+    padding: var(--space-m) 0;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color var(--transition-short);
+}
+
+.tabText {
+    position: relative;
+}
+
+.tab.active .tabText::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: var(--color-primary);
+    width: 100%;
+}
+
+.tab:hover {
+    color: var(--color-ink);
+    background-color: var(--color-neutral);
+}

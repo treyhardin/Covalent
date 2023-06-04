@@ -1,0 +1,20 @@
+.valuePropItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    gap: var(--space-m);
+}
+
+.icon {
+    width: 25%;
+    max-width: 60px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

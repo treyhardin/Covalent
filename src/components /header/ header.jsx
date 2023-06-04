@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styles from './header.module.css';
-import Icon from "./icons/icons";
+import Icon from "../icons/icons";
 
 export default function Header(props) {
     return (

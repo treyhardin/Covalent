@@ -1,0 +1,19 @@
+.linkBlocks {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-reverse);
+    padding: var(--space-l) var(--space-l) var(--space-l);
+    gap: var(--space-xl);
+}
+
+.linkBlocksInner {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: var(--space-m);
+}
+
+.divider {
+    height: 2px;
+    background-color: var(--color-primary);
+}

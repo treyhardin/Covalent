@@ -1,0 +1,35 @@
+.linkBlock {
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: var(--rounded-large);
+    padding: var(--space-l);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text {
+    position: relative;
+    z-index: 1;
+    color: var(--color-reverse);
+}
+
+.button {
+    position: relative;
+    z-index: 1;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}

@@ -1,0 +1,15 @@
+.valueProps {
+    background-color: var(--color-reverse);
+    padding: var(--space-m) var(--space-l);
+}
+
+.valuePropsInner {
+    background-color: var(--color-light);
+    border-radius: var(--rounded-large);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-xl);
+}
