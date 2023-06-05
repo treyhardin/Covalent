@@ -16,7 +16,7 @@ import Sections_Tier2 from './routes/tier2/sections_Tier2';
 import Images_Tier2 from './routes/tier2/images_Tier2';
 import Buttons_Tier2 from './routes/tier2/buttons_Tier2';
 
-import Tier3 from './routes/tier3';
+import Tier3 from './routes/tier3/tier3';
 import Text_Tier1 from './routes/tier1/text_Tier1';
 import Settings_Tier1 from './routes/tier1/settings_Tier1';
 
@@ -45,7 +45,7 @@ function App() {
             <Route path='buttons' element={<Buttons_Tier2 />} />
           </Route>
           
-          <Route path='tier3' element={<Tier1 />} />
+          <Route path='tier3' element={<Tier3 />} />
         </Routes>
       </Router>
     </>
