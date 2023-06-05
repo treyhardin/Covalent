@@ -40,6 +40,17 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
     text-align: left;
+}
+
+.styleButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: var(--space-xs);
+}
+
+.styleButtons > * {
+    flex: 1 0 auto;
 }

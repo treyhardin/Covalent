@@ -1,6 +1,7 @@
 .fullBleed {
     background-color: var(--color-reverse);
     padding: var(--space-l);
+    text-align: center;
 }
 
 .fullBleedInner {

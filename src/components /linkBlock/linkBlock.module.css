@@ -6,7 +6,6 @@
     overflow: hidden;
     border-radius: var(--rounded-large);
     padding: var(--space-l);
-    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

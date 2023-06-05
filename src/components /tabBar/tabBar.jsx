@@ -1,5 +1,4 @@
 import styles from './tabBar.module.css'
-import globalStyles from '../../global.module.css'
 import { Route, Link, NavLink } from "react-router-dom";
 
 export default function TabBar(props) {
