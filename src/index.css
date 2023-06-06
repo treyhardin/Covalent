@@ -27,14 +27,18 @@
   --color-primary: #AFAFE0;
   --color-secondary: #787973;
 
+  --form-control-color: var(--color-ink);
+
   /* Brand Styles */
   --rounded-small: 4px;
   --rounded-large: 10px;
 
   /* Animation */
-  --easing: cubic-bezier(0.25, 1, 0.5, 1);
-  --transition-short: 0.3s var(--easing);
-  --transition-long: 0.8s var(--easing);
+  --anim-easing: cubic-bezier(0.25, 1, 0.5, 1);
+  --anim-duration-short: 0.3s;
+  --anim-duration: 0.6s;
+  --transition-short: var(--anim-duration-short) var(--anim-easing);
+  --transition-long: var(--anim-duration) var(--anim-easing);
 
   /* Browser Adjustments */
   font-synthesis: none;
@@ -251,7 +255,8 @@ button:focus-visible {
 }
 
 .button {
-  color: inherit;
+  /* position: relative; */
+  color: var(--color-ink);
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0.11em;

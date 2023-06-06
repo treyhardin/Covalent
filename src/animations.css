@@ -8,7 +8,7 @@
 
 .anim--fade {
     opacity: 0;
-    transition: opacity var(--transition-long);
+    transition: none;
     will-change: opacity;
 }
 
@@ -20,47 +20,51 @@
 .anim--fade-up {
     opacity: 0;
     transform: translateY(var(--move-amount));
-    transition: opacity var(--transition-long), transform var(--transition-long);
     will-change: opacity, transform;
+    transition: none;
 }
 
 .anim--fade-up.visible {
     opacity: 1;
     transform: translateY(0px);
+    transition: opacity var(--transition-long), transform var(--transition-long);
 }
 
 .anim--zoom {
     opacity: 0;
     transform: scale(var(--scale-amount));
-    transition: opacity var(--transition-long), transform var(--transition-long);
     will-change: opacity, transform;
+    transition: none;
 }
 
 .anim--zoom.visible {
     opacity: 1;
     transform: scale(1);
+    transition: opacity var(--transition-long), transform var(--transition-long);
 }
 
 .anim--skew {
     opacity: 0;
     transform: skewY(var(--skew-amount)) translateY(var(--move-amount));
-    transition: opacity var(--transition-long), transform var(--transition-long);
+    transition: none;
     will-change: opacity, transform;
 }
 
 .anim--skew.visible {
     opacity: 1;
     transform: skewY(0deg) translateY(0px);
+    transition: opacity var(--transition-long), transform var(--transition-long);
 }
 
 .anim--blur {
     opacity: 0;
     filter: blur(var(--blur-amount));
-    transition: opacity var(--transition-long), filter var(--transition-long);
     will-change: opacity, filter;
+    transition: none;
 }
 
 .anim--blur.visible {
     opacity: 1;
     filter: blur(0px);
+    transition: opacity var(--transition-long), filter var(--transition-long);
 }

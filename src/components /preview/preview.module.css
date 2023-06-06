@@ -1,0 +1,44 @@
+.preview {
+    position: relative;
+    background-color: var(--color-neutral);
+    flex: 1 1 50%;
+    aspect-ratio: 1 / 1;
+    color: var(--color-reverse);
+    border-radius: var(--rounded-large);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: var(--space-xl);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: var(--rounded-large);
+}
+
+.previewButton {
+    position: absolute;
+    right: var(--space-s);
+    bottom: var(--space-s);
+    left: var(--space-s);
+    margin: 0;
+}
+

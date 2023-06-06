@@ -19,35 +19,38 @@ import Buttons_Tier2 from './routes/tier2/buttons_Tier2';
 import Tier3 from './routes/tier3/tier3';
 import Text_Tier1 from './routes/tier1/text_Tier1';
 import Settings_Tier1 from './routes/tier1/settings_Tier1';
+import GlobalState from './utils/globalState';
 
 function App() {
 
   return (
     <>
       {/* <RouterProvider router={router} /> */}
-      <Router>
-        <Routes>
-          <Route path='/' element={<Tier1 />} />
+      <GlobalState>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Tier1 />} />
 
-          <Route path='tier1' element={<Tier1 />}>
-            <Route index element={<Overview_Tier1 />} />
-            <Route path='overview' element={<Overview_Tier1 />} />
-            <Route path='text' element={<Text_Tier1 />} />
-            <Route path='images' element={<Images_Tier1 />} />
-            <Route path='settings' element={<Settings_Tier1 />} />
-          </Route>
+            <Route path='tier1' element={<Tier1 />}>
+              <Route index element={<Overview_Tier1 />} />
+              <Route path='overview' element={<Overview_Tier1 />} />
+              <Route path='text' element={<Text_Tier1 />} />
+              <Route path='images' element={<Images_Tier1 />} />
+              <Route path='settings' element={<Settings_Tier1 />} />
+            </Route>
 
-          <Route path='tier2' element={<Tier2 />}>
-            <Route index element={<Overview_Tier2 />} />
-            <Route path='overview' element={<Overview_Tier2 />} />
-            <Route path='sections' element={<Sections_Tier2 />} />
-            <Route path='images' element={<Images_Tier2 />} />
-            <Route path='buttons' element={<Buttons_Tier2 />} />
-          </Route>
-          
-          <Route path='tier3' element={<Tier3 />} />
-        </Routes>
-      </Router>
+            <Route path='tier2' element={<Tier2 />}>
+              <Route index element={<Overview_Tier2 />} />
+              <Route path='overview' element={<Overview_Tier2 />} />
+              <Route path='sections' element={<Sections_Tier2 />} />
+              <Route path='images' element={<Images_Tier2 />} />
+              <Route path='buttons' element={<Buttons_Tier2 />} />
+            </Route>
+            
+            <Route path='tier3' element={<Tier3 />} />
+          </Routes>
+        </Router>
+      </GlobalState>
     </>
   )
 }

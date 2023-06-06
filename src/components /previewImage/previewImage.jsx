@@ -1,22 +1,87 @@
+import { useState } from 'react'
+import { imageAnimationStyles } from '../../utils/options'
 import RadioButton from '../radioButton/radioButton'
 import styles from './previewImage.module.css'
+import { useGlobalState, useGlobalStateUpdate } from '../../utils/globalState'
+import RadioGroup from '../radioGroup/radioGroup'
+import Preview from '../preview/preview'
+import RangeSlider from '../rangeSlider/rangeSlider'
 
 export default function PreviewImage(props) {
+
+    const globalState = useGlobalState()
+
+    const [ previewToggle, setPreviewToggle ] = useState(false)
+
+    const updatePreview = () => {
+        setPreviewToggle(!previewToggle)
+    }
+    
     return (
         <section className={styles.previewImage} >
-            <div className={styles.preview}>
-                <img className={styles.image} src="/images/tier1/ImagePreview.jpg" />
-            </div>
+            <Preview 
+                toggle={previewToggle}
+                toggleAction={setPreviewToggle}
+                showText={false}
+                showImage={true}
+            />
             <div className={styles.settings}>
+
                 <h2 className='h3'>Image Load-In</h2>
-                <p>Animation Style</p>
-                <div className={styles.styleButtons}>
-                    <RadioButton text="Fade" value="fade" id="fade" name="image-animation" />
-                    <RadioButton text="Fade Up" value="fade-up" id="fade-up" name="image-animation" />
-                    <RadioButton text="Zoom" value="zoom" id="zoom" name="image-animation" />
-                    <RadioButton text="Skew" value="skew" id="skew" name="image-animation" />
-                    <RadioButton text="Blur" value="blur" id="blur" name="image-animation" />
-                </div>
+
+                <RadioGroup 
+                    title="Animation Style"
+                    dataType={imageAnimationStyles}
+                    stateAttribute={'imageAnimationStyle'}
+                    callback={updatePreview}
+                />
+
+                {globalState.imageAnimationStyle == imageAnimationStyles.fadeUp ? 
+                    <RangeSlider
+                        title="Move Amount"
+                        unit="px"
+                        min="0"
+                        max="120"
+                        step="1"
+                        attribute={'moveAmount'}
+                        callback={updatePreview}
+                    />
+                : ''}
+
+                {globalState.imageAnimationStyle == imageAnimationStyles.skew ?
+                    <RangeSlider
+                        title="Skew Amount"
+                        unit="deg"
+                        min="0"
+                        max="10"
+                        step="0.5"
+                        attribute={'skewAmount'}
+                        callback={updatePreview}
+                    />
+                : ''}
+
+                {globalState.imageAnimationStyle == imageAnimationStyles.zoom ?
+                    <RangeSlider
+                        title="Scale Amount"
+                        min="0"
+                        max="2"
+                        step="0.1"
+                        attribute={'scaleAmount'}
+                        callback={updatePreview}
+                    />
+                : ''}
+
+                {globalState.imageAnimationStyle == imageAnimationStyles.blur ?
+                    <RangeSlider
+                        title="Blur Amount"
+                        unit="px"
+                        min="0"
+                        max="60"
+                        step="1"
+                        attribute={'blurAmount'}
+                        callback={updatePreview}
+                    />
+                : ''}
                 
             </div>
         </section>

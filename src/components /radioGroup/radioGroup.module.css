@@ -1,0 +1,12 @@
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    /* gap: var(--space-xs); */
+    margin-bottom: var(--space-m);
+}
+
+.radioButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xs);
+}

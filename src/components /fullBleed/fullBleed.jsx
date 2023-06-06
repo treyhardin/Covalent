@@ -30,7 +30,7 @@ export default function FullBleed(props) {
                     }`}>
                         <h2>{props.title}</h2>
                         <p>{props.text}</p>
-                        <button className='button button--secondary'>Button Text</button>
+                        {/* <button className='button button--secondary'>Button Text</button> */}
                     </div>
                 </ViewportAnimation>
             </div>

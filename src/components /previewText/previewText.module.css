@@ -8,20 +8,6 @@
     gap: var(--space-xl);
 }
 
-.preview {
-    flex: 1 1 50%;
-    aspect-ratio: 1 / 1;
-    background-color: var(--color-ink);
-    color: var(--color-reverse);
-    border-radius: var(--rounded-large);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: var(--space-xl);
-}
-
 .settings {
     flex: 1 1 50%;
     display: flex;
@@ -29,15 +15,5 @@
     justify-content: flex-start;
     align-items: stretch;
     text-align: left;
-}
-
-.styleButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    gap: var(--space-xs);
-}
-
-.styleButtons > * {
-    flex: 1 0 auto;
+    max-width: 350px;
 }
