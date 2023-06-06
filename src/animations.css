@@ -1,9 +1,22 @@
 :root {
-    /* Animation Settings */
+    /* Animation Settings (Overriden by GlobalState.jsx) */
+    --image-anim-duration: 0.5s;
+    --text-anim-duration: 0.5s;
+
     --move-amount: 60px;
     --skew-amount: 3deg;
     --scale-amount: 1.2;
     --blur-amount: 40px;
+
+    --duration: var(--text-anim-duration);
+}
+
+.anim-text {
+    --duration: var(--text-anim-duration);
+}
+
+.anim-image {
+    --duration: var(--image-anim-duration);
 }
 
 .anim--fade {
@@ -14,7 +27,7 @@
 
 .anim--fade.visible {
     opacity: 1;
-    transition: opacity var(--transition-long);
+    transition: opacity var(--duration) var(--anim-easing);
 }
 
 .anim--fade-up {
@@ -27,20 +40,31 @@
 .anim--fade-up.visible {
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity var(--transition-long), transform var(--transition-long);
+    transition: opacity var(--duration) var(--anim-easing), transform var(--duration) var(--anim-easing);
 }
 
 .anim--zoom {
+    transform: scale(var(--scale-amount));
+    will-change: transform;
+    transition: none;
+}
+
+.anim--zoom.visible {
+    transform: scale(1);
+    transition: transform var(--duration) var(--anim-easing);
+}
+
+.anim--zoom-fade {
     opacity: 0;
     transform: scale(var(--scale-amount));
     will-change: opacity, transform;
     transition: none;
 }
 
-.anim--zoom.visible {
+.anim--zoom-fade.visible {
     opacity: 1;
     transform: scale(1);
-    transition: opacity var(--transition-long), transform var(--transition-long);
+    transition: opacity var(--duration) var(--anim-easing), transform var(--duration) var(--anim-easing);
 }
 
 .anim--skew {
@@ -53,7 +77,7 @@
 .anim--skew.visible {
     opacity: 1;
     transform: skewY(0deg) translateY(0px);
-    transition: opacity var(--transition-long), transform var(--transition-long);
+    transition: opacity var(--duration) var(--anim-easing), transform var(--duration) var(--anim-easing);
 }
 
 .anim--blur {
@@ -66,5 +90,5 @@
 .anim--blur.visible {
     opacity: 1;
     filter: blur(0px);
-    transition: opacity var(--transition-long), filter var(--transition-long);
+    transition: opacity var(--duration) var(--anim-easing), filter var(--duration) var(--anim-easing);
 }
