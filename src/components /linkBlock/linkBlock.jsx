@@ -1,8 +1,11 @@
 import { useRef } from 'react'
 import ViewportAnimation from '../viewportAnimation/viewportAnimation'
 import styles from './linkBlock.module.css'
+import { useGlobalState } from '../../utils/globalState'
 
 export default function LinkBlock(props) {
+
+    const globalState = useGlobalState()
 
     const imageRef = useRef(null)
     const textRef = useRef(null)
@@ -12,8 +15,9 @@ export default function LinkBlock(props) {
         <div className={styles.linkBlock}>
             <ViewportAnimation
                 element={textRef}
-                style="fade-"
+                style={globalState.textAnimationStyle.value}
                 delay="0.25"
+                type="text"
             >
                 <div className={styles.text} ref={textRef}>
                     <h3>{props.title}</h3>
@@ -25,6 +29,7 @@ export default function LinkBlock(props) {
                 element={buttonRef}
                 style="fade"
                 delay="0.5"
+                type="text"
             >
                 <button className={`${styles.button} button`} ref={buttonRef}>Button Text</button>
             </ViewportAnimation>

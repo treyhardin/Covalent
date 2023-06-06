@@ -22,7 +22,7 @@ export default function PreviewImage(props) {
             <Preview 
                 toggle={previewToggle}
                 toggleAction={setPreviewToggle}
-                showText={false}
+                showText={true}
                 showImage={true}
             />
             <div className={styles.settings}>
@@ -82,6 +82,16 @@ export default function PreviewImage(props) {
                         callback={updatePreview}
                     />
                 : ''}
+
+                <RangeSlider
+                    title="Duration"
+                    unit="s"
+                    min="0"
+                    max="4"
+                    step="0.1"
+                    attribute={'imageAnimationDuration'}
+                    callback={updatePreview}
+                />
                 
             </div>
         </section>

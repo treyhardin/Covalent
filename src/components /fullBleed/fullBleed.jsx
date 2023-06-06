@@ -1,8 +1,11 @@
 import { useRef } from 'react'
 import ViewportAnimation from '../viewportAnimation/viewportAnimation'
 import styles from './fullBleed.module.css'
+import { useGlobalState } from '../../utils/globalState'
 
 export default function FullBleed(props) {
+
+    const globalState = useGlobalState()
 
     const imageRef = useRef(null)
     const textRef = useRef(null)
@@ -12,15 +15,17 @@ export default function FullBleed(props) {
             <div className={styles.fullBleedInner}>
                 <ViewportAnimation
                     element={imageRef}
-                    style="zoom"
+                    style={globalState.imageAnimationStyle.value}
                     delay="0"
+                    type="image"
                 >
                     <img className={styles.backgroundImage} src={props.image} ref={imageRef} />
                 </ViewportAnimation>
                 <ViewportAnimation
                     element={textRef}
-                    style="fade-up"
+                    style={globalState.textAnimationStyle.value}
                     delay="0.5"
+                    type="text"
                 >
                     <div ref={textRef} className={`${styles.text} ${
                         props.color == 'reverse' ? 'colorReverse' : 

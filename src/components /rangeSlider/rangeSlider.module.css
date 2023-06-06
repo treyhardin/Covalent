@@ -1,6 +1,7 @@
 .rangeSlider {
     --thumb-size: 20px;
     --track-height: 5px;
+    margin-bottom: var(--space-s);
 }
 
 .sliderInput {

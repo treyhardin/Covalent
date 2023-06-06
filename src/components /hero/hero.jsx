@@ -1,8 +1,11 @@
 import { useRef } from 'react'
 import ViewportAnimation from '../viewportAnimation/viewportAnimation'
 import styles from './hero.module.css'
+import { useGlobalState } from '../../utils/globalState'
 
 export default function Hero(props){
+
+    const globalState = useGlobalState()
 
     const imageRef = useRef(null)
     const textRef = useRef(null)
@@ -11,8 +14,9 @@ export default function Hero(props){
         <section className={styles.hero}>
             <ViewportAnimation
                 element={textRef}
-                style="fade-up"
+                style={globalState.textAnimationStyle.value}
                 delay="0.5"
+                type="text"
             >
                 <div ref={textRef} className={`${styles.heroText} ${
                         props.color == 'reverse' ? 'colorReverse' : 
@@ -27,7 +31,8 @@ export default function Hero(props){
             </ViewportAnimation>
             <ViewportAnimation
                 element={imageRef}
-                style="zoom"
+                style={globalState.imageAnimationStyle.value}
+                type="image"
             >
                 <img src={props.image} className={styles.heroImage} ref={imageRef} />
             </ViewportAnimation>

@@ -40,14 +40,14 @@ export default function Preview(props) {
         <div className={styles.preview}>
 
             {props.showText ? 
-                <div className={`${styles.text} anim--${textAnimation}`} ref={textRef}>
+                <div className={`${styles.text} anim--${textAnimation} anim-text`} ref={textRef}>
                     <h4>Lorem Ipsum Dolor Sit Amet.</h4>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
                 </div>
             : ''}
 
             {props.showImage ? 
-                <img className={`${styles.image} anim--${imageAnimation}`} src="/images/preview/ImagePreview.jpg" ref={imageRef} />
+                <img className={`${styles.image} anim--${imageAnimation} anim-image`} src="/images/preview/ImagePreview.jpg" ref={imageRef} />
             : ''}
 
             <button className={`${styles.previewButton} button button--primary`} onClick={updatePreview}>Preview</button>

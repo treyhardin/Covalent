@@ -23,7 +23,7 @@ export default function PreviewText(props) {
                 toggle={previewToggle}
                 toggleAction={setPreviewToggle}
                 showText={true}
-                showImage={false}
+                showImage={true}
             />
             <div className={styles.settings}>
                 <h2 className='h3'>Text Load-In</h2>
@@ -57,6 +57,16 @@ export default function PreviewText(props) {
                         callback={updatePreview}
                     />
                 : ''}
+
+                <RangeSlider
+                    title="Duration"
+                    unit="s"
+                    min="0"
+                    max="4"
+                    step="0.1"
+                    attribute={'textAnimationDuration'}
+                    callback={updatePreview}
+                />
                 
             </div>
         </section>

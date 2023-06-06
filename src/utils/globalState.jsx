@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { easingFunctions, easingTypes, imageAnimationStyles, textAnimationStyles } from './options';
 import { getEasingBezier } from './helpers';
 
@@ -24,10 +24,12 @@ export const updateGlobalState = (key, value) => {
 
 export default function GlobalState({children}) {
 
+    // Initial Values
     const state = {
         textAnimationStyle: textAnimationStyles.fadeUp,
-        imageAnimationStyle: imageAnimationStyles.zoom,
-        duration: 0.5,
+        textAnimationDuration: 0.8,
+        imageAnimationStyle: imageAnimationStyles.zoomFade,
+        imageAnimationDuration: 1.5,
         easingType: easingTypes.easeOut,
         easingFunction: easingFunctions.quart,
         moveAmount: 60,
@@ -41,14 +43,21 @@ export default function GlobalState({children}) {
     const updateGlobalState = (input) => {
         setGlobalState(input)
 
+        // Update CSS Variables
         const rootStyle = document.documentElement.style
-        rootStyle.setProperty('--anim-duration', input.duration + 's')
+        rootStyle.setProperty('--text-anim-duration', input.textAnimationDuration + 's')
+        rootStyle.setProperty('--image-anim-duration', input.imageAnimationDuration + 's')
         rootStyle.setProperty('--anim-easing', getEasingBezier(input))
         rootStyle.setProperty('--move-amount', input.moveAmount + 'px')
         rootStyle.setProperty('--skew-amount', input.skewAmount + 'deg')
         rootStyle.setProperty('--scale-amount', input.scaleAmount)
         rootStyle.setProperty('--blur-amount', input.blurAmount + 'px')
     }
+
+    // Initialize Initial Values
+    useEffect(() => {
+        updateGlobalState(state)
+    }, [])
 
     return (
         <GlobalStateContext.Provider value={globalState}>

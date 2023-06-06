@@ -30,6 +30,10 @@ export const imageAnimationStyles = {
         label: "Zoom",
         value: "zoom"
     },
+    zoomFade: {
+        label: "Zoom Fade",
+        value: "zoom-fade"
+    },
     blur: {
         label: "Blur",
         value: "blur"

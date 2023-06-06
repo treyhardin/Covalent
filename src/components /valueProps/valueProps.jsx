@@ -5,8 +5,6 @@ import styles from './valueProps.module.css'
 
 export default function ValueProps(props) {
 
-    const valuePropRef = useRef(null)
-
     return (
         <section className={styles.valueProps}>
             <div className={styles.valuePropsInner}>

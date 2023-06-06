@@ -41,7 +41,7 @@ export default function PreviewSettings(props) {
                 />
 
                 {/* <p>Duration: {globalState.duration}s</p> */}
-                <RangeSlider
+                {/* <RangeSlider
                     title="Duration"
                     unit="s"
                     min="0"
@@ -49,7 +49,7 @@ export default function PreviewSettings(props) {
                     step="0.1"
                     attribute={'duration'}
                     callback={updatePreview}
-                />
+                /> */}
                 
             </div>
         </section>

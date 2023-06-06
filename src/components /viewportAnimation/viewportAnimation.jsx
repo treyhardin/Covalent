@@ -35,7 +35,7 @@ export default function ViewportAnimation(props) {
         <>
             {Children.map(props.children, child => {
                 return cloneElement(child, {
-                    className: `${child.props.className} anim--${props.style ? props.style : 'fade'}`
+                    className: `${child.props.className} anim--${props.style ? props.style : 'fade'} ${props.type == "text" ? 'anim-text' : 'anim-image'}`
                 })
             })}
         </>
