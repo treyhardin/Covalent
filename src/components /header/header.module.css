@@ -10,6 +10,7 @@
     right: 0;
     padding: var(--space-m) var(--space-l);
     z-index: 999;
+    pointer-events: none;
 }
 
 .navigation {
@@ -19,6 +20,7 @@
     border: 1px solid var(--color-ink);
     border-radius: var(--rounded-small);
     overflow: hidden;
+    pointer-events: all;
 }
 
 .navigationLink {
