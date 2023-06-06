@@ -6,13 +6,14 @@
     outline: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
     cursor: pointer;
 }
 
 .input {
     margin-left: var(--space-xs);
     cursor: pointer;
-}
+  }
 
 .label {
     flex: 1 0 auto;

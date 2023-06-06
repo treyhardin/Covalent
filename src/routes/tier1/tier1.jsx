@@ -24,15 +24,15 @@ export default function Tier1(props) {
                     label: 'Overview',
                     url: 'overview'
                 },{
+                    label: 'Settings',
+                    url: 'settings'
+                },{
                     label: 'Text',
                     url: 'text'
                 },{
                     label: 'Images',
                     url: 'images'
-                },{
-                    label: 'Settings',
-                    url: 'settings'
-                }]}
+                },]}
             />
             <Outlet />
             <LinkBlocks 

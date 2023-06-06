@@ -47,7 +47,7 @@ export default function Preview(props) {
             : ''}
 
             {props.showImage ? 
-                <img className={`${styles.image} anim--${imageAnimation}`} src="/images/tier1/ImagePreview.jpg" ref={imageRef} />
+                <img className={`${styles.image} anim--${imageAnimation}`} src="/images/preview/ImagePreview.jpg" ref={imageRef} />
             : ''}
 
             <button className={`${styles.previewButton} button button--primary`} onClick={updatePreview}>Preview</button>
